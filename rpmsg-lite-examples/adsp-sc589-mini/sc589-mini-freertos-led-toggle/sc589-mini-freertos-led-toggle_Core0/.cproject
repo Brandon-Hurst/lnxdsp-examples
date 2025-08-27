@@ -6,8 +6,8 @@
 				<macros>
 					<stringMacro name="rtos-name" type="VALUE_TEXT" value="FreeRTOS for Cortex-A5"/>
 					<stringMacro name="rtos" type="VALUE_TEXT" value="FreeRTOS-Add-in"/>
-					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="uart-driver-version" type="VALUE_TEXT" value="1.0"/>
+					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="component-type" type="VALUE_TEXT" value="RTOS"/>
 				</macros>
 				<externalSettings/>
@@ -19,6 +19,7 @@
 					<extension id="com.analog.crosscore.core.CCESARMErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.analog.crosscore.managedbuilder.core.errorparser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
@@ -158,8 +159,8 @@
 				<macros>
 					<stringMacro name="rtos-name" type="VALUE_TEXT" value="FreeRTOS for Cortex-A5"/>
 					<stringMacro name="rtos" type="VALUE_TEXT" value="FreeRTOS-Add-in"/>
-					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="uart-driver-version" type="VALUE_TEXT" value="1.0"/>
+					<stringMacro name="rtos-vendor" type="VALUE_TEXT" value="Analog Devices, Inc."/>
 					<stringMacro name="component-type" type="VALUE_TEXT" value="RTOS"/>
 				</macros>
 				<externalSettings/>
@@ -171,6 +172,7 @@
 					<extension id="com.analog.crosscore.core.CCESARMErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
 					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.analog.crosscore.managedbuilder.core.errorparser" point="org.eclipse.cdt.core.ErrorParser"/>
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">

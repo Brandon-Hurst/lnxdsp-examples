@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
 	<installedComponents>
-		<component id="com.analog.crosscore.addins.freertos" name="FreeRTOS" version="1.0.0" visible="false">
-			<component-description><![CDATA[This component provides the FreeRTOS Add-in UI. The add-in is intended to help the users to generate the FreeRTOS configuration code.]]></component-description>
-			<product name="FreeRTOS" version="1.0.0"/>
-		</component>
-		<component id="com.analog.crosscore.addins.freertos.sharc" name="FreeRTOS for SHARC" version="1.0.0" visible="true">
-			<component-description><![CDATA[This component provides ADI's implementation of FreeRTOS.]]></component-description>
-			<product name="FreeRTOS" version="1.0.0"/>
-		</component>
 		<component id="com.analog.sourcegen.component.startup_ldf" name="Startup Code/LDF" version="1.0.0" visible="true">
 			<component-description><![CDATA[This component provides the ability to generate Startup Code and LDF source files. Startup code is a procedure that initializes and configures the processor when execution jumps to the "start" address on reset.
 It sets the machine into a known state, initializes selected features, and enables the standard runtime-model.
 A Linker Description File (LDF) defines the target memory map and the placement of program sections within processor memory.
 It provides information needed to link your code. It can be used to configure memory related options, such as the placement of the system heap, system stack, and external memory.]]></component-description>
 			<product name="Startup Code/LDF" version="1.0.0"/>
+		</component>
+		<component id="com.analog.crosscore.addins.freertos" name="FreeRTOS" version="1.1.0" visible="false">
+			<component-description><![CDATA[This component provides the FreeRTOS Add-in UI. The add-in is intended to help the users to generate the FreeRTOS configuration code.]]></component-description>
+			<product name="FreeRTOS" version="1.1.0"/>
+		</component>
+		<component id="com.analog.crosscore.addins.freertos.sharc" name="FreeRTOS for SHARC" version="1.1.0" visible="true">
+			<component-description><![CDATA[This component provides ADI's implementation of FreeRTOS.]]></component-description>
+			<product name="FreeRTOS" version="1.1.0"/>
 		</component>
 	</installedComponents>
 	<configurations>
@@ -32,7 +32,7 @@ It provides information needed to link your code. It can be used to configure me
 					</propertygroup>
 					<propertygroup name="template_schemas" value="true">
 						<property name="ldf_schema" value="210.00"/>
-						<property name="startup_code_schema" value="211.03"/>
+						<property name="startup_code_schema" value="212.01"/>
 					</propertygroup>
 					<crt>
 						<propertygroup name="cplb_init" value="true">
@@ -62,8 +62,8 @@ It provides information needed to link your code. It can be used to configure me
 					</crt>
 					<ldf>
 						<propertygroup name="system_heap" value="L1">
-							<property name="min_size" value="2"/>
 							<property name="size_units" value="kB"/>
+							<property name="min_size" value="2"/>
 							<property name="customized" value="false"/>
 						</propertygroup>
 						<propertygroup name="system_stack" value="L1">
@@ -75,8 +75,8 @@ It provides information needed to link your code. It can be used to configure me
 							<property name="partitioned" value="default"/>
 							<property name="size" value="256"/>
 							<property name="dmc_size_1" value="256"/>
-							<property name="size_units" value="MegaBytes"/>
 							<property name="dmc_size_0" value="256"/>
+							<property name="size_units" value="MegaBytes"/>
 						</propertygroup>
 						<propertygroup name="running_from_internal_memory" value="true"/>
 						<propertygroup name="libraries" value="true">
@@ -87,9 +87,14 @@ It provides information needed to link your code. It can be used to configure me
 							<property name="use_fileio_libs" value="false"/>
 							<property name="use_alt_io_lib" value="false"/>
 						</propertygroup>
+						<propertygroup name="use_xspi_sram" value="false">
+							<property name="startAddress" value="0"/>
+							<property name="custom_range" value="false"/>
+							<property name="endAddress" value="0"/>
+						</propertygroup>
 						<property name="use_eh" value="true"/>
-						<property name="user_heap_src_file" value="app_heaptab.c"/>
 						<property name="use_full_cpplib" value="false"/>
+						<property name="user_heap_src_file" value="app_heaptab.c"/>
 						<property name="use_software_modules" value="false"/>
 						<property name="use_user_mod_ldf" value="true"/>
 						<property name="use_pgo_hw" value="false"/>
